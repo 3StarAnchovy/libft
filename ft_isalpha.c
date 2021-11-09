@@ -1,14 +1,20 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 19:46:39 by jihong            #+#    #+#             */
+/*   Updated: 2021/11/10 03:28:08 by jihong           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalpha(int c)
-{
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-        return (1);
-    return (0);
-}
+#include<unistd.h>
 
-int main(void)
+int	ft_isalpha(int c)
 {
-    printf("%d",ft_isalpha('a'));
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	return (0);
 }
