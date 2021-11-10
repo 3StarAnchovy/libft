@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 19:30:33 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/10 18:34:27 by jihong           ###   ########.fr       */
+/*   Created: 2021/11/10 14:57:21 by jihong            #+#    #+#             */
+/*   Updated: 2021/11/10 19:38:08 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-int	ft_isalnum(int c)
-{
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	return (0);
-}
+int	ft_isprint(int c);
+int ft_isdigit(int c);
+int ft_isascii(int c);
+int	ft_isalpha(int c);
+int	ft_isalnum(int c);
+int	ft_strlen(char *c);

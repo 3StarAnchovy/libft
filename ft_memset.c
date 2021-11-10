@@ -1,20 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 19:30:33 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/10 18:34:27 by jihong           ###   ########.fr       */
+/*   Created: 2021/11/10 19:52:39 by jihong            #+#    #+#             */
+/*   Updated: 2021/11/10 21:56:59 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include<string.h>
+#include<stdio.h>
 
-int	ft_isalnum(int c)
+void *ft_memset(void *ptr, int value, size_t num)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	if(ptr == '\0')
+		return ('\0');
+	while(i < value)
+	{
+		(unsigned char*)(ptr+i) = (unsigned char)value;
+		i ++;
+	}
+}
+
+int main(void)
+{
+	int arr[5];
+	for(int i=0;i<5;i++)
+	{
+		printf("%d",arr[i]);
+		printf(" ");
+	}
+	memset(arr,'\0',sizeof(int) * 5);
+	for(int i=0;i<5;i++)
+	{
+		printf("%d",arr[i]);
+		printf(" ");
+	}
 }

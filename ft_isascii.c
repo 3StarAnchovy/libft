@@ -6,15 +6,15 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 03:21:27 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/10 03:39:11 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:34:43 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if ((c >= 0) && (c <= 127))
-        return (1);
-    return (0);
+	if ((c >= 0) && (c <= 127))
+		return (1);
+	return (0);
 }

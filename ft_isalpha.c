@@ -6,11 +6,11 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:46:39 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/10 03:28:08 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:34:25 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
