@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 19:52:39 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/10 21:56:59 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/10 23:35:28 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 void *ft_memset(void *ptr, int value, size_t num)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if(ptr == '\0')
-		return ('\0');
-	while(i < value)
+	if(ptr == NULL)
+		return (NULL);
+	while(i < num)
 	{
-		(unsigned char*)(ptr+i) = (unsigned char)value;
+		*(unsigned char*)(ptr + i) = (unsigned char)value;
 		i ++;
 	}
 }
@@ -37,6 +37,12 @@ int main(void)
 		printf(" ");
 	}
 	memset(arr,'\0',sizeof(int) * 5);
+	for(int i=0;i<5;i++)
+	{
+		printf("%d",arr[i]);
+		printf(" ");
+	}
+	ft_memset(arr,'\0',sizeof(int) * 5);
 	for(int i=0;i<5;i++)
 	{
 		printf("%d",arr[i]);
