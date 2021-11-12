@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 19:38:38 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/12 19:51:14 by jihong           ###   ########.fr       */
+/*   Created: 2021/11/11 20:52:38 by jihong            #+#    #+#             */
+/*   Updated: 2021/11/11 20:54:38 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include<stdio.h>
+#include<unistd.h>
+#include<string.h>
 
-size_t	ft_strlen(const char *c)
+void *ft_memmove(void *dest, const void *src, size_t size)
 {
-	int	i;
 
-	i = 0;
-	while (c[i] != '\0')
-		i ++;
-	return (i);
+}
+
+int main(void)
+{
+
 }
