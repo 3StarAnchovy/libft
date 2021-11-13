@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/12 19:35:25 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/12 19:54:56 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int main()
 	// return : srcLen
 	char a[10];
 	char b[10] = "abcdef";
-	ft_strlcpy()
-	printf("%s", )
+	ft_strlcpy(a,b,3);
+	printf("%s", a);
 }
