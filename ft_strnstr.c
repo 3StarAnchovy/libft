@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:11:02 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/16 17:59:01 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/16 18:21:03 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ int main(void)
 {
 	char a[10] = "abcdefg";
 	char b[10] = "cde";
-	printf("%s", strnstr(a,b,6));
+	printf("%s", strnstr(a,b,2));
 	printf("\n");
-	printf("%s", ft_strnstr(a,b,6));
+	printf("hid");
+	printf("%s", ft_strnstr(a,b,-1));
 }
