@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/16 16:11:07 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/16 16:42:20 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,16 @@ int main()
 // 	printf("\n");
 // 	printMemory(ft_memchr(a,'c',3));
 // }
+
+
+//memcmp
+// int main(void)
+// {
+// 	char a[10] = "abcdef";
+// 	char b[10] = "abcgef";
+// 	printf("%d",memcmp(a,b,6));
+// 	printf("\n");
+// 	printf("%d",ft_memcmp(a,b,6));
+// }
+
 
