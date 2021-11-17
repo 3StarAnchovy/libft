@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/17 16:06:24 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/17 16:47:35 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,17 +80,30 @@
 // }
 
 //ft_strdup
+// int main(void)
+// {
+// 	char a[10];
+// 	char *str;
+// 	str = strdup(a);
+// 	printf("%s",str);
+// 	free(str);
+
+// 	char b[10] = "asdf";
+// 	printf("\n");
+// 	str = ft_strdup(b);
+// 	printf("%s",str);
+// 	free(str);
+// }
+
 int main(void)
 {
-	char a[10];
+	char a[10] = "abadsf";
 	char *str;
-	str = strdup(a);
+	str = (char *)calloc(5,-1);
 	printf("%s",str);
-	free(str);
-
-	char b[10] = "asdf";
 	printf("\n");
-	str = ft_strdup(b);
-	printf("%s",str);
-	free(str);
+	for(int i=0;i<5;i++)
+	{
+		printf("%d\n",str[i]);
+	}
 }
