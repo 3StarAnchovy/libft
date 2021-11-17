@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 14:57:21 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/17 15:53:26 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/17 17:52:48 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,6 @@ int	ft_isalnum(int c);
 size_t	ft_strlen(const char *c);
 size_t	ft_strlcpy(const void *dest, const void *src, size_t size);
 char	*ft_strdup(const char *s1);
+void	*ft_calloc(size_t count, size_t size);
+void	ft_bzero(void *block, size_t size);
+

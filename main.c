@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/17 16:47:35 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/17 17:51:38 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,17 @@
 
 int main(void)
 {
-	char a[10] = "abadsf";
 	char *str;
-	str = (char *)calloc(5,-1);
+	char *str2;
+
+	str = (char *)calloc(5,sizeof(char));
+	printf("%s",str);
+	printf("\n");
+	for(int i=0;i<5;i++)
+	{
+		printf("%d\n",str[i]);
+	}
+	str2 = ft_calloc(5,sizeof(char));
 	printf("%s",str);
 	printf("\n");
 	for(int i=0;i<5;i++)
