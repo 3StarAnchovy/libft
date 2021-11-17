@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 14:57:21 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/17 18:21:17 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/17 19:06:41 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ void	*ft_calloc(size_t count, size_t size);
 void	ft_bzero(void *block, size_t size);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 

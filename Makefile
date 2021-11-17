@@ -6,14 +6,14 @@
 #    By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 18:36:03 by jihong            #+#    #+#              #
-#    Updated: 2021/11/17 18:22:01 by jihong           ###   ########.fr        #
+#    Updated: 2021/11/17 19:06:54 by jihong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	= ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_isalnum.c \
 			ft_strlen.c ft_strlcpy.c ft_strdup.c ft_calloc.c \
 			ft_bzero.c \
-			ft_substr.c
+			ft_substr.c ft_strjoin.c
 OBJS	= ${SRCS:.c=.o}
 INCS	= includes
 NAME	= libft.a

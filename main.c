@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/17 18:50:38 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/17 19:12:05 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,13 +118,23 @@
 // 	}
 // }
 
-//
+//substr
+// int main(void)
+// {
+// 	char *substr;
+// 	char a[50] = "abcdefg";
+
+// 	substr = ft_substr(a,2,2);
+// 	printf("%s",substr);
+// 	free(substr);
+// }
+
 int main(void)
 {
-	char *substr;
-	char a[50] = "abcdefg";
+	char a[10] = "abcd";
+	char b[10] = "asdf";
 
-	substr = ft_substr(a,2,2);
-	printf("%s",substr);
-	free(substr);
+	char *sum;
+	sum = ft_strjoin(a,b);
+	printf("%s",sum);
 }
