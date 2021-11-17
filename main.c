@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/17 17:51:38 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/17 18:50:38 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,23 +95,36 @@
 // 	free(str);
 // }
 
+
+//calloc
+// int main(void)
+// {
+// 	char *str;
+// 	char *str2;
+
+// 	str = (char *)calloc(5,sizeof(char));
+// 	printf("%s",str);
+// 	printf("\n");
+// 	for(int i=0;i<5;i++)
+// 	{
+// 		printf("%d\n",str[i]);
+// 	}
+// 	str2 = ft_calloc(5,sizeof(char));
+// 	printf("%s",str);
+// 	printf("\n");
+// 	for(int i=0;i<5;i++)
+// 	{
+// 		printf("%d\n",str[i]);
+// 	}
+// }
+
+//
 int main(void)
 {
-	char *str;
-	char *str2;
+	char *substr;
+	char a[50] = "abcdefg";
 
-	str = (char *)calloc(5,sizeof(char));
-	printf("%s",str);
-	printf("\n");
-	for(int i=0;i<5;i++)
-	{
-		printf("%d\n",str[i]);
-	}
-	str2 = ft_calloc(5,sizeof(char));
-	printf("%s",str);
-	printf("\n");
-	for(int i=0;i<5;i++)
-	{
-		printf("%d\n",str[i]);
-	}
+	substr = ft_substr(a,2,2);
+	printf("%s",substr);
+	free(substr);
 }
