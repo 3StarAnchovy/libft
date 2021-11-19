@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/17 19:47:40 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/19 16:20:18 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,12 +129,28 @@
 // 	free(substr);
 // }
 
-int main(void)
-{
-	char a[10] = "abcd";
-	char b[10] = "asdf";
+// strjoin
+// int main(void)
+// {
+// 	char a[10] = "abcd";
+// 	char b[10] = "asdf";
 
-	char *sum;
-	sum = ft_strjoin(a,b);
-	printf("%s",sum);
+// 	char *sum;
+// 	sum = ft_strjoin(a,b);
+// 	printf("%s",sum);
+// }
+
+//strlcpy
+int	main(void)
+{
+
+	char a[15] = "loren ipsum dol";
+	char p[15];
+	strlcpy(p,a,3);
+	printf("%s",p);
+	printf("\n");
+	ft_strlcpy(p,a,0);
+	printf("%s",p);
+
+
 }
