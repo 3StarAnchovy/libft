@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 19:52:39 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/17 17:46:43 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/19 15:14:03 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@ void	*ft_memset(void *ptr, int value, size_t num)
 	size_t	i;
 
 	i = 0;
-	if(ptr == NULL)
+	if (ptr == NULL)
 		return (NULL);
-	while(i < num)
+	while (i < num)
 	{
-		*(unsigned char*)(ptr + i) = (unsigned char)value;
+		*(unsigned char *)(ptr + i) = (unsigned char)value;
 		i ++;
 	}
+	return (ptr);
 }
