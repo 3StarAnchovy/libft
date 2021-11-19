@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 20:17:09 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/13 21:06:13 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/19 19:05:01 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 char	*ft_strchr(const char *str, int c)
 {
 	int	i;
+	int	len;
 
 	i = 0;
-	while (*(str + i) != '\0')
+	len = ft_strlen(str);
+	while (i <= len)
 	{
 		if (*(str + i) == c)
 			return ((char *)(str + i));

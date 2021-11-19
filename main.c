@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/19 17:24:44 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/19 19:02:35 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,12 +154,18 @@
 // }
 
 //strlcat
+// int main(void)
+// {
+// 	char a[30] = "1234";
+// 	char *src = "456789";
+// 	int c = ft_strlcat(a,src,4);
+// 	printf("%d -- %s",c,a);
+// }
+
 int main(void)
 {
-	char a[30] = "1234";
-	char *src = "456789";
-	int c = ft_strlcat(a,src,4);
-	printf("%d -- %s",c,a);
-
-
+	char *a = "abc";
+	printf("%p",strchr(a,'\0'));
+	printf("\n");
+	printf("%p",ft_strchr(a,'\0'));
 }
