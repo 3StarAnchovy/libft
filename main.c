@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/19 16:20:18 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/19 16:46:48 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,17 +140,24 @@
 // 	printf("%s",sum);
 // }
 
-//strlcpy
-int	main(void)
+// //strlcpy
+// int	main(void)
+// {
+
+// 	char a[15] = "loren ipsum dol";
+// 	char p[15];
+// 	strlcpy(p,a,3);
+// 	printf("%s",p);
+// 	printf("\n");
+// 	ft_strlcpy(p,a,0);
+// 	printf("%s",p);
+// }
+
+//strlcat
+int main(void)
 {
-
-	char a[15] = "loren ipsum dol";
-	char p[15];
-	strlcpy(p,a,3);
-	printf("%s",p);
-	printf("\n");
-	ft_strlcpy(p,a,0);
-	printf("%s",p);
-
-
+	char a[10] = "asdf";
+	char b[10] = "bsfff";
+	int c = strlcat(a,b,3);
+	printf("%d -- %s",c,a);
 }
