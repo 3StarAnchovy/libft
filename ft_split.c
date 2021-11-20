@@ -6,38 +6,62 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:30:48 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/18 17:39:26 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/21 02:51:33 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static int count_char(char const *s, char c)
+static int count_word(char const *s, char c)
 {
-	int	i;
-	int	cnt;
+	int cnt;
+	int i;
 
-	i = 0;
 	cnt = 0;
-	while(*(s + i) != '\0')
+	i = 0;
+	while (*(s + i) != '\0')
 	{
-		if (*(s + i) == c)
-			cnt ++;
-		i ++;
+		if ((s[0] != c && i == 0) ||
+			(*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0'))
+		{
+			cnt++;
+		}
+		i++;
 	}
 	return (cnt);
 }
 
-char	**ft_split(char const *s, char c)
+char *get_str(char *str, int c)
 {
-	int cnt;
 
-	cnt = count_char(s,c);
+}
+
+char **ft_split(char const *s, char c)
+{
+	int	cnt;
+	int	str_index;
+	int	i;
+	char **str;
+
+	str_index = 0;
+	i = 0;
+	cnt = count_word(s, c);
+	str = (char **)malloc(sizeof(char *) * cnt);
+	if (str == NULL)
+		return (NULL);
+	while (*(s + i) != '\0')
+	{
+		if ((s[0] != c && i == 0) ||
+			(*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0'))
+		{
+			str[str_index] = get_str(s + i, c);
+		}
+	}
 }
 
 int main(void)
 {
-	char a[10] = "abcdecfc";
-	printf("%d",count_char(a,'c'));
+	char *a = "hello,fxxking,world,,!,";
+	printf("%d", count_word(a, ','));
 }
