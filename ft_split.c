@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:30:48 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/21 02:51:33 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/21 15:33:31 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,12 @@ static int count_word(char const *s, char c)
 	return (cnt);
 }
 
-char *get_str(char *str, int c)
+char	*fr_str(char *str)
+{
+
+}
+
+static char *get_str(char *str, int c)
 {
 
 }
@@ -56,6 +61,8 @@ char **ft_split(char const *s, char c)
 			(*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0'))
 		{
 			str[str_index] = get_str(s + i, c);
+			if(str[str_index] == NULL)
+				return (NULL);
 		}
 	}
 }
