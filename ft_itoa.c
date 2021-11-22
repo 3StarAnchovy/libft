@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:43:35 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/20 17:25:14 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/22 19:26:25 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,24 @@ static int	get_len(int n)
 	return (len);
 }
 
+static char	*rev_str(char *str)
+{
+	int	len;
+	int	i;
+	char temp;
+
+	len = ft_strlen(str);
+	i = 0;
+	while (i < len)
+	{
+		temp = *(str + i);
+		*(str + i) = *(str + len - i);
+		*(str + len - i) = temp;
+		i ++;
+	}
+	return (str);
+}
+
 char	*ft_itoa(int n)
 {
 	int		len;
@@ -48,11 +66,13 @@ char	*ft_itoa(int n)
 		*(str + i) = '-';
 		i ++;
 	}
-	if (i < len)
+	while (i < len)
 	{
-		*(str + n - i) = '0' + (n % 10);
+		*(str + i) = '0' + (n % 10);
 		n /= 10;
 		i ++;
 	}
+	*(str + i) = '\0';
+	rev_str(str);
 	return (str);
 }

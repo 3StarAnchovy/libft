@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/22 18:59:08 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/22 19:16:47 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,7 +178,10 @@
 // }
 
 //putnbr
+//itoa
 int main(void)
 {
-	ft_putnbr_fd(271,1);
+	//ft_putnbr_fd(271,1);
+	//printf("\n");
+	printf("%s",ft_itoa(271));
 }
