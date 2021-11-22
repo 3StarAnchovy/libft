@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/22 16:21:38 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/22 18:59:08 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -170,3 +170,15 @@
 // 	printf("\n");
 // 	printf("%p",ft_strchr(a,'\0'));
 // }
+
+//putchar
+// int main(void)
+// {
+// 	ft_putchar_fd('c',0);
+// }
+
+//putnbr
+int main(void)
+{
+	ft_putnbr_fd(271,1);
+}

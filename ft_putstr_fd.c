@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 23:54:34 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/21 00:08:13 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/22 18:51:49 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	while (*(s + i) != '\0')
 	{
-		write(1, s + i, 1);
+		write(fd, s + i, 1);
 		i ++;
 	}
 }
