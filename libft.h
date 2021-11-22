@@ -6,12 +6,18 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 14:57:21 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/21 15:47:54 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/21 16:01:14 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
+
+typedef struct s_list
+{
+	void 			*content;
+	struct s_list 	*next;
+}t_list;
 
 int	ft_isprint(int c);
 int	ft_isdigit(int c);
