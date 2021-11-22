@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/22 17:31:13 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/22 17:52:40 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,16 @@ int ft_lstsize(t_list *lst)
 	return (size);
 }
 
+void ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (lst == NULL || new == NULL)
+		return ;
+	new -> next = *lst;
+	*lst = new; //맨앞 주소 저장
+	// 몰?루?
+	// new
+}
+
 void addNode(t_list *list, t_list *new)
 {
 	list -> next = new;
@@ -59,12 +69,28 @@ void printNode(t_list *list)
 	}
 }
 
+t_list *ft_lstlast(t_list *lst)
+{
+	if (lst == NULL)
+		return (NULL);
+	while(lst -> next != NULL)
+		lst = lst -> next;
+	return (lst);
+}
+
 int main(void)
 {
 	t_list *lst1;
 	t_list *lst2;
-	lst1 = ft_lstnew("abc");
-	lst2 = ft_lstnew("asdf");
+	t_list *lst3;
+	lst1 = ft_lstnew("abc/ ");
+	lst2 = ft_lstnew("asdf/ ");
+	lst3 = ft_lstnew("first/ ");
 	addNode(lst1,lst2);
+	ft_lstadd_front(&lst1,lst3);
 	printNode(lst1);
+	printf("\n size : %d",ft_lstsize(lst1));
+	printf("\n last Node : ");
+	printNode(ft_lstlast(lst1));
+	printf("\n");
 }
