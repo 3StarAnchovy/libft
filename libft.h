@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 14:57:21 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/22 15:42:20 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/22 18:40:01 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 t_list	*ft_lstnew(void *content);
 void ft_lstadd_front(t_list **lst, t_list *new);

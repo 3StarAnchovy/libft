@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 18:04:21 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/21 00:02:11 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/22 18:45:42 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	*(substr + i) = '\0';
 	return (substr);
 }
-

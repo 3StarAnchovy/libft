@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/22 17:52:40 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/22 18:02:20 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,14 @@ t_list *ft_lstlast(t_list *lst)
 	return (lst);
 }
 
+void ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list *last;
+	last = ft_lstlast(*lst);
+	last -> next = new;
+	new ->next = NULL;
+}
+
 int main(void)
 {
 	t_list *lst1;
@@ -93,4 +101,9 @@ int main(void)
 	printf("\n last Node : ");
 	printNode(ft_lstlast(lst1));
 	printf("\n");
+
+	t_list *last;
+	last = ft_lstnew("last");
+	ft_lstadd_back(&lst1,last);
+	printNode(lst1);
 }
