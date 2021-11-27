@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/22 18:02:20 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/27 17:37:45 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void printNode(t_list *list)
 {
 	while (list != NULL)
 	{
-		printf("%s",list -> content);
+		printf("%s",(char *)list -> content);
 		list = list->next;
 	}
 }
@@ -84,6 +84,40 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last -> next = new;
 	new ->next = NULL;
+}
+
+void ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (lst == NULL)
+		return (NULL);
+	del(lst -> content);
+	free(lst);
+}
+
+void ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list *a;
+	t_list *next;
+
+	a = *lst;
+	while(a != NULL)
+	{
+		next = a -> next;
+		ft_lstdelone(a, del);
+		a = next;
+	}
+	*lst = NULL;
+}
+
+void ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	if (lst == NULL || f == NULL)
+		return ;
+	while (lst == NULL)
+	{
+		f(lst -> content);
+		lst = lst -> next;
+	}
 }
 
 int main(void)
