@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:30:48 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/21 15:33:31 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/29 01:30:26 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,27 +32,48 @@ static int count_word(char const *s, char c)
 	return (cnt);
 }
 
-char	*fr_str(char *str)
+static char *ft_strndup(const char *str, int len)
 {
+	char	*ret;
+	int		i;
 
+	i = 0;
+	ret = (char *)malloc(sizeof(char) * (len + 1));
+	if(ret == NULL)
+		return (NULL);
+	while(i < len)
+	{
+		*(ret + i) = *(str + i);
+		i ++;
+	}
+	*(ret + i) = '\0';
+	return (ret);
 }
 
-static char *get_str(char *str, int c)
+static void free_str(const char **str)
 {
+	int	i;
 
+	i = 0;
+	while(*(str + i) != '\0')
+	{
+		free(str + i);
+		i ++;
+	}
+	free(str);
 }
 
 char **ft_split(char const *s, char c)
 {
-	int	cnt;
 	int	str_index;
+	int word_index;
 	int	i;
 	char **str;
 
 	str_index = 0;
+	word_index = 0;
 	i = 0;
-	cnt = count_word(s, c);
-	str = (char **)malloc(sizeof(char *) * cnt);
+	str = (char **)malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (str == NULL)
 		return (NULL);
 	while (*(s + i) != '\0')
@@ -60,15 +81,25 @@ char **ft_split(char const *s, char c)
 		if ((s[0] != c && i == 0) ||
 			(*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0'))
 		{
-			str[str_index] = get_str(s + i, c);
+			printf("%d\n",word_index);
+			str[str_index] = ft_strndup((s + i), word_index);
 			if(str[str_index] == NULL)
-				return (NULL);
+				free_str(str);
+			str_index ++;
+			word_index = 0;
 		}
+		i ++;
+		word_index ++;
 	}
+	return (str);
 }
 
 int main(void)
 {
 	char *a = "hello,fxxking,world,,!,";
-	printf("%d", count_word(a, ','));
+	char *b = "abcde";
+	char **c = ft_split(a, ',');
+	printf("%s",c[0]);
+	//char *c = ft_strndup(b + 1,2);
+	//printf("%s",c);
 }
