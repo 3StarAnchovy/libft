@@ -14,18 +14,5 @@
 
 char *ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
-	int		i;
-	int		j;
-
-	i = 0;
-	whlie(*(s1 + i) != '\0')
-	{
-		j = 0;
-		while(*(set + j) != '\0')
-		{
-			j ++;
-		}
-		i ++;
-	}
+	
 }
