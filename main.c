@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/28 17:32:14 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/28 17:44:20 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,19 @@
 //overlap
 //dest의 주소가 src의 주소보다 클 경우 overlap 발생
 //위의 경우 뒤에서부터 복!사!
-int main(void)
-{
-	int a[10] = {1,2,3,4,5,6,7,8,9};
-	//int b[10];
+// int main(void)
+// {
+// 	int a[10] = {1,2,3,4,5,6,7,8,9};
+// 	//int b[10];
 
-	//ft_memmove(a + 1,a,sizeof(int) * 9);
-	for(int i = 0; i < 10; i ++)
-		printf("%d ",a[i]);
-	printf("\n");
-	printf("%s\n",ft_memmove(a+1,a,0));
-	for(int i = 0; i < 10; i ++)
-		printf("%d ",a[i]);
-}
+// 	//ft_memmove(a + 1,a,sizeof(int) * 9);
+// 	for(int i = 0; i < 10; i ++)
+// 		printf("%d ",a[i]);
+// 	printf("\n");
+// 	printf("%s\n",ft_memmove(a+1,a,0));
+// 	for(int i = 0; i < 10; i ++)
+// 		printf("%d ",a[i]);
+// }
 //memchr.c
 // void printMemory(void *ptr)
 // {
@@ -86,15 +86,15 @@ int main(void)
 
 
 //strnstr
-//int main(void)
-//{
-// 	char a[10] = "abcdefg";
-// 	char b[10] = "cde";
-// 	printf("%s", strnstr(a,b,2));
-// 	printf("\n");
-// 	printf("hid");
-// 	printf("%s", ft_strnstr(a,b,-1));
-// }
+int main(void)
+{
+	char a[10] = "abcdefg";
+	char b[10] = "cde";
+	printf("%s", strnstr("lorem ipsum dolor sit amet","dolor",20));
+	printf("\n");
+	printf("%s", ft_strnstr("lorem ipsum dolor sit amet","dolor",15));
+	//check_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
+}
 
 //ft_strdup
 // int main(void)
