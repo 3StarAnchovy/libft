@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/28 16:25:27 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/28 17:32:14 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,23 @@
 // 	printf("%d",ft_strncmp(a,b,8));
 // }
 
+//memcpy와 memmove의 차이점
+//overlap
+//dest의 주소가 src의 주소보다 클 경우 overlap 발생
+//위의 경우 뒤에서부터 복!사!
+int main(void)
+{
+	int a[10] = {1,2,3,4,5,6,7,8,9};
+	//int b[10];
+
+	//ft_memmove(a + 1,a,sizeof(int) * 9);
+	for(int i = 0; i < 10; i ++)
+		printf("%d ",a[i]);
+	printf("\n");
+	printf("%s\n",ft_memmove(a+1,a,0));
+	for(int i = 0; i < 10; i ++)
+		printf("%d ",a[i]);
+}
 //memchr.c
 // void printMemory(void *ptr)
 // {
