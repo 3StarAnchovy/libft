@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/28 17:44:20 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/28 18:38:11 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,15 +86,15 @@
 
 
 //strnstr
-int main(void)
-{
-	char a[10] = "abcdefg";
-	char b[10] = "cde";
-	printf("%s", strnstr("lorem ipsum dolor sit amet","dolor",20));
-	printf("\n");
-	printf("%s", ft_strnstr("lorem ipsum dolor sit amet","dolor",15));
-	//check_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
-}
+// int main(void)
+// {
+// 	char a[10] = "abcdefg";
+// 	char b[10] = "cde";
+// 	printf("%s", strnstr("lorem ipsum dolor sit amet","dolor",20));
+// 	printf("\n");
+// 	printf("%s", ft_strnstr("lorem ipsum dolor sit amet","dolor",15));
+// 	//check_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
+// }
 
 //ft_strdup
 // int main(void)
@@ -196,9 +196,9 @@ int main(void)
 
 //putnbr
 //itoa
-// int main(void)
-// {
-// 	//ft_putnbr_fd(271,1);
-// 	//printf("\n");
-// 	printf("%s",ft_itoa(271));
-// }
+int main(void)
+{
+	//ft_putnbr_fd(271,1);
+	//printf("\n");
+	printf("%s",ft_itoa(-2147483648));
+}
