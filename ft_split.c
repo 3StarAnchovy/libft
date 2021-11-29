@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:30:48 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/29 18:31:18 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/29 18:33:32 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ char	**ft_split(const char *s, char c)
 	{
 		flag = 0;
 		if ((s[0] != c && i == 0))
-			middle = get_str((s + i),&flag,c);
+			middle = get_str((s + i), &flag, c);
 		else if(*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0')
 			middle = get_str((s + i + 1), &flag, c);
 		if (middle == NULL && flag == 1)
