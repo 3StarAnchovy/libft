@@ -6,17 +6,16 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:30:48 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/29 17:29:57 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/29 18:31:18 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static int count_word(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
-	int cnt;
-	int i;
+	int	cnt;
+	int	i;
 
 	cnt = 0;
 	i = 0;
@@ -25,23 +24,23 @@ static int count_word(char const *s, char c)
 		if ((s[0] != c && i == 0) ||
 			(*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0'))
 		{
-			cnt++;
+			cnt ++;
 		}
 		i++;
 	}
 	return (cnt);
 }
 
-static char *ft_strndup(const char *str, int len)
+static char	*ft_strndup(const char *str, int len)
 {
 	char	*ret;
 	int		i;
 
 	i = 0;
 	ret = (char *)malloc(sizeof(char) * (len + 1));
-	if(ret == NULL)
+	if (ret == NULL)
 		return (NULL);
-	while(i < len)
+	while (i < len)
 	{
 		*(ret + i) = *(str + i);
 		i ++;
@@ -50,33 +49,40 @@ static char *ft_strndup(const char *str, int len)
 	return (ret);
 }
 
-
-static void free_str(char **str)
+static char	**free_str(char **str)
 {
 	int	i;
 
 	i = 0;
-	while(*(str + i) != NULL)
+	while (*(str + i) != NULL)
 	{
 		free(str + i);
 		i ++;
 	}
 	free(str);
+	return (NULL);
 }
 
-static char *get_str(const char *str, int *flag, char c)
+static char	*get_str(const char *str, int *flag, char c)
 {
 	char	*middle;
 	int		i;
 
 	*flag = 1;
 	i = 0;
-	while(*(str + i) != '\0')
+	while (*(str + i) != '\0')
 	{
-		if(*(str + i) == c)
+		if (*(str + i) == c)
 		{
-			middle = ft_strndup(str,i);
-			if(middle == NULL)
+			middle = ft_strndup(str, i);
+			if (middle == NULL)
+				return (NULL);
+			return (middle);
+		}
+		else if (i == (int)ft_strlen(str) - 1)
+		{
+			middle = ft_strndup(str, i);
+			if (middle == NULL)
 				return (NULL);
 			return (middle);
 		}
@@ -85,10 +91,10 @@ static char *get_str(const char *str, int *flag, char c)
 	return (NULL);
 }
 
-char **ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	*middle;
-	char 	**str;
+	char	**str;
 	int		i;
 	int		flag;
 	int		str_index;
@@ -97,43 +103,20 @@ char **ft_split(const char *s, char c)
 	i = 0;
 	str = (char **)malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (str == NULL)
-		return (NULL);
+		return	NULL;
 	while (*(s + i) != '\0')
 	{
 		flag = 0;
 		if ((s[0] != c && i == 0))
-		{
 			middle = get_str((s + i),&flag,c);
-		}
 		else if(*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0')
-		{
-			//str[str_index] = ft_strndup((s + i), word_index);
-			//if(str[str_index] == NULL)
-			//	free_str(str);
-		}
-		if (middle == NULL)
-		{
-			free_str(str);
-			return (NULL);
-		}
-		else
-		{
-			printf("%s\n",middle);
-			str[str_index] = middle;
-			str_index ++;
-		}
+			middle = get_str((s + i + 1), &flag, c);
+		if (middle == NULL && flag == 1)
+			return (free_str(str));
+		else if(flag == 1)
+			str[str_index ++] = middle;
+		i ++;
 	}
+	str[i] = 0;
 	return (str);
-}
-
-int main(void)
-{
-	char *a = "hello,fxxking,world,,!,";
-	//char *b = "abcde";
-	char **c = ft_split(a, ',');
-	for(int i = 0; i < 4; i ++)
-		printf("%s\n",c[i]);
-	free_str(c);
-	//char *c = ft_strndup(b + 1,2);
-	//printf("%s",c);å
 }

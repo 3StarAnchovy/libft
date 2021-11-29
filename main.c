@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/29 17:24:00 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/29 17:55:29 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,13 +180,13 @@
 // }
 
 //strchr
-int main(void)
-{
-	char *a = "abcdbdsadfb";
-	printf("%s",strchr(a,'b'));
-	printf("\n");
-	printf("%p",ft_strchr(a,'\0'));
-}
+// int main(void)
+// {
+// 	char *a = "abcdbdsadfb";
+// 	printf("%s",strchr(a,'b'));
+// 	printf("\n");
+// 	printf("%p",ft_strchr(a,'\0'));
+// }
 
 //putchar
 // int main(void)
@@ -202,3 +202,17 @@ int main(void)
 // 	//printf("\n");
 // 	printf("%s",ft_itoa(-2147483648LL));
 // }
+
+//split
+int main(void)
+{
+	char *a = "hello,fxxking,world,,!,";
+	//char *b = "abcde";
+	char **c = ft_split(a, ',');
+	for(int i = 0; i < 4; i ++)
+		printf("%s\n",c[i]);
+	free(c);
+	//char *c = ft_strndup(b + 1,2);
+	//printf("%s",c);å
+	//kadjsfklajsdfkl;j안해 ^^ㅣ바
+}
