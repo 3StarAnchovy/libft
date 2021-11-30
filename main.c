@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/29 21:54:54 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/29 23:23:55 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,5 +220,5 @@
 //strtrim
 int main(void)
 {
-	printf("%s",ft_strtrim("a2s2dfsadf","2"));
+	printf("%s",ft_strtrim("abqbc","abc"));
 }
