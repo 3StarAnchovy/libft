@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:30:48 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/29 18:33:32 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/30 16:27:43 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	count_word(char const *s, char c)
 	i = 0;
 	while (*(s + i) != '\0')
 	{
-		if ((s[0] != c && i == 0) ||
+		if ((s[0] != c && i == 0) || \
 			(*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0'))
 		{
 			cnt ++;
@@ -70,6 +70,7 @@ static char	*get_str(const char *str, int *flag, char c)
 
 	*flag = 1;
 	i = 0;
+	middle = NULL;
 	while (*(str + i) != '\0')
 	{
 		if (*(str + i) == c)
@@ -100,22 +101,21 @@ char	**ft_split(const char *s, char c)
 	int		str_index;
 
 	str_index = 0;
-	i = 0;
+	i = -1;
 	str = (char **)malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (str == NULL)
-		return	NULL;
-	while (*(s + i) != '\0')
+		return (NULL);
+	while (s[++ i] != '\0')
 	{
 		flag = 0;
 		if ((s[0] != c && i == 0))
 			middle = get_str((s + i), &flag, c);
-		else if(*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0')
+		else if (*(s + i) == c && *(s + i + 1) != c && *(s + i + 1) != '\0')
 			middle = get_str((s + i + 1), &flag, c);
 		if (middle == NULL && flag == 1)
 			return (free_str(str));
-		else if(flag == 1)
+		else if (flag == 1)
 			str[str_index ++] = middle;
-		i ++;
 	}
 	str[i] = 0;
 	return (str);
