@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:30:48 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/30 16:27:43 by jihong           ###   ########.fr       */
+/*   Updated: 2021/11/30 16:46:44 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ static char	*ft_strndup(const char *str, int len)
 	int		i;
 
 	i = 0;
+	if (len == 0)
+		return (NULL);
 	ret = (char *)malloc(sizeof(char) * (len + 1));
 	if (ret == NULL)
 		return (NULL);
