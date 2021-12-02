@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/02 18:36:04 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/02 18:42:29 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,21 @@
 // 	printf("%d",ft_strncmp(a,b,8));
 // }
 
+//memset
+// int main(void)
+// {
+// 	//printf("%s",memset(0,3,3));
+// 	printf("%s",ft_memset(0,3,3));
+// }
+
 //memcpy
-int main(void)
-{
-	char a[10] ="\0";
-	char b[10] = "asdf";
-	printf("%s\n",memcpy(0,0,3));
-	printf("%s",ft_memcpy(0,0,3));
-}
+// int main(void)
+// {
+// 	char a[10] ="\0";
+// 	char b[10] = "asdf";
+// 	printf("%s\n",memcpy(0,0,3));
+// 	printf("%s",ft_memcpy(0,0,3));
+// }
 
 //memcpy와 memmove의 차이점
 //overlap
