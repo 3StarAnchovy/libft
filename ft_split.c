@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:30:48 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/30 16:46:44 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/02 17:10:24 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,9 @@ static char	*get_str(const char *str, int *flag, char c)
 				return (NULL);
 			return (middle);
 		}
-		else if (i == (int)ft_strlen(str) - 1)
+		else if (i == (int)(ft_strlen(str)) - 1)
 		{
-			middle = ft_strndup(str, i);
+			middle = ft_strndup(str, i + 1);
 			if (middle == NULL)
 				return (NULL);
 			return (middle);
@@ -107,7 +107,7 @@ char	**ft_split(const char *s, char c)
 	str = (char **)malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (str == NULL)
 		return (NULL);
-	while (s[++ i] != '\0')
+	while (s[++i] != '\0')
 	{
 		flag = 0;
 		if ((s[0] != c && i == 0))
