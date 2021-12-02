@@ -6,11 +6,11 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:05:45 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/22 15:10:32 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/02 16:11:34 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#incldue "libft.h"
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

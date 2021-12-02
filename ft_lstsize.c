@@ -6,18 +6,18 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:51:00 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/22 15:53:23 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/02 16:37:09 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	size;
 
 	size = 0;
-	while(lst != NULL)
+	while (lst != NULL)
 	{
 		lst = lst -> next;
 		size ++;

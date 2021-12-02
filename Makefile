@@ -6,7 +6,7 @@
 #    By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 18:36:03 by jihong            #+#    #+#              #
-#    Updated: 2021/11/29 21:43:19 by jihong           ###   ########.fr        #
+#    Updated: 2021/12/02 16:34:34 by jihong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,11 @@ SRCS	= ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_isalnum.c \
 			ft_substr.c ft_strjoin.c ft_atoi.c ft_strmapi.c ft_split.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c
 
+SRCS_BN	= ft_lstnew.c ft_lstsize.c ft_lstlast.c \
+			ft_lstadd_front.c ft_lstadd_back.c
+
 OBJS	= ${SRCS:.c=.o}
+OBJS_BN	= ${SRCS_BN:.c=.o}
 INCS	= includes
 NAME	= libft.a
 LIBC	= ar rc
@@ -33,6 +37,10 @@ CFLAGS	= -Wall -Wextra -Werror
 
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
+	${LIBR} ${NAME}
+
+bonus: ${OBJS} ${OBJS_BN}
+	${LIBC} ${NAME} ${OBJS} ${OBJS_BN}
 	${LIBR} ${NAME}
 
 all: ${NAME}
