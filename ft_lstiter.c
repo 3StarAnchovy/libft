@@ -6,9 +6,11 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 16:39:32 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/02 16:39:52 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/02 16:43:50 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

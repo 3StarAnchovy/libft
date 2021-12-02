@@ -6,9 +6,11 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 16:38:19 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/02 16:39:04 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/02 16:43:56 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
