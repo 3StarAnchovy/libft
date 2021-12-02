@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/02 18:53:41 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/02 19:21:26 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,15 +102,15 @@
 
 
 //strnstr
-int main(void)
-{
-	char a[10] = "abcdefg";
-	char b[10] = "cde";
-	//printf("%s\n", strnstr(0,"dolor",20));
-	printf("\n");
-	printf("%s", ft_strnstr(0,"dolor",0));
-	//check_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
-}
+// int main(void)
+// {
+// 	char a[10] = "abcdefg";
+// 	char b[10] = "cde";
+// 	//printf("%s\n", strnstr(0,"dolor",20));
+// 	printf("\n");
+// 	printf("%s", ft_strnstr(0,"dolor",0));
+// 	//check_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
+// }
 
 //ft_strdup
 // int main(void)
@@ -224,7 +224,7 @@ int main(void)
 // {
 // 	char *a = "hello,fxxking,world,,!,";
 // 	//char *b = "abcde";
-// 	char **c = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+// 	char **c = ft_split("      split       this for   me  !       ", ' ');
 // 	int	i = 0;
 // 	while(*(c + i) != 0)
 // 	{
