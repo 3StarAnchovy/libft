@@ -6,10 +6,11 @@
 #    By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 18:36:03 by jihong            #+#    #+#              #
-#    Updated: 2021/12/03 16:37:15 by jihong           ###   ########.fr        #
+#    Updated: 2021/12/03 18:47:35 by jihong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME	= libft.a
 SRCS	= ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_isalnum.c \
 			ft_tolower.c ft_toupper.c \
 			ft_memcpy.c ft_memchr.c ft_memcmp.c ft_memmove.c ft_memset.c \
@@ -26,7 +27,6 @@ SRCS_BN	= ft_lstnew.c ft_lstsize.c ft_lstlast.c \
 OBJS	= ${SRCS:.c=.o}
 OBJS_BN	= ${SRCS_BN:.c=.o}
 INCS	= includes
-NAME	= libft.a
 LIBC	= ar rc
 LIBR	= ranlib
 CC		= gcc
@@ -37,7 +37,7 @@ CFLAGS	= -Wall -Wextra -Werror
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I${INCS}
 
 ${NAME}: ${OBJS}
-	${LIBC} ${NAME} ${OBJS}
+	${LIBC} ${NAME} ${OBJS} ${OBJS_BN}
 	${LIBR} ${NAME}
 
 bonus: ${OBJS} ${OBJS_BN}
