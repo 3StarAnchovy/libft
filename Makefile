@@ -6,7 +6,7 @@
 #    By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 18:36:03 by jihong            #+#    #+#              #
-#    Updated: 2021/12/02 16:42:00 by jihong           ###   ########.fr        #
+#    Updated: 2021/12/02 21:38:22 by jihong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ bonus: ${OBJS} ${OBJS_BN}
 all: ${NAME}
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${OBJS_BN}
 
 fclean: clean
 	${RM} ${NAME}
