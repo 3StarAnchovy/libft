@@ -6,18 +6,21 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 14:57:21 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/03 16:37:05 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/03 17:42:42 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 
-typedef struct	s_list
+# include <unistd.h>
+# include <stdlib.h>
+
+typedef struct s_list
 {
-	void 			*content;
-	struct s_list 	*next;
-}t_list;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_isprint(int c);
 int		ft_isdigit(int c);
@@ -66,3 +69,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+#endif
