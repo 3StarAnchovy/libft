@@ -6,7 +6,7 @@
 #    By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 18:36:03 by jihong            #+#    #+#              #
-#    Updated: 2021/12/03 18:47:35 by jihong           ###   ########.fr        #
+#    Updated: 2021/12/04 17:57:58 by jihong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ CFLAGS	= -Wall -Wextra -Werror
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I${INCS}
 
 ${NAME}: ${OBJS}
-	${LIBC} ${NAME} ${OBJS} ${OBJS_BN}
+	${LIBC} ${NAME} ${OBJS}
 	${LIBR} ${NAME}
 
 bonus: ${OBJS} ${OBJS_BN}

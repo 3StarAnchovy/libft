@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/02 21:32:32 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/05 17:45:06 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,35 +40,50 @@
 // }
 
 //memset
+//byte 단위의 초기화
+// 문자열말고 다른걸 초기화 할 때는 0이나 NULL
 // int main(void)
 // {
 // 	//printf("%s",memset(0,3,3));
-// 	printf("%s",ft_memset(0,3,3));
+// 	int a[5];
+// 	char b[5];
+// 	ft_memset(a,1,sizeof(int) * 5);
+// 	ft_memset(b,1,sizeof(char) * 5);
+// 	for(int i =0; i < 5; i ++)
+// 		printf("%d ",a[i]);
+// 	printf("\n");
+// 	for(int i = 0; i < 5; i ++)
+// 		printf("%d ",b[i]);
 // }
 
-//memcpy
-// int main(void)
-// {
-// 	char a[10] ="\0";
-// 	char b[10] = "asdf";
-// 	printf("%s\n",memcpy(0,0,3));
-// 	printf("%s",ft_memcpy(0,0,3));
-// }
 
 //memcpy와 memmove의 차이점
 //overlap
 //dest의 주소가 src의 주소보다 클 경우 overlap 발생
-//위의 경우 뒤에서부터 복!사!
+//위의 경우 뒤에서부터 복사
 // int main(void)
 // {
 // 	int a[10] = {1,2,3,4,5,6,7,8,9};
 // 	//int b[10];
 
-// 	//ft_memmove(a + 1,a,sizeof(int) * 9);
 // 	for(int i = 0; i < 10; i ++)
 // 		printf("%d ",a[i]);
 // 	printf("\n");
-// 	printf("%s\n",ft_memmove(a+1,a,0));
+// 	ft_memcpy(a + 1,a,sizeof(int) * 9);
+// 	for(int i = 0; i < 10; i ++)
+// 		printf("%d ",a[i]);
+// }
+
+//memmove
+// int main(void)
+// {
+// 	int a[10] = {1,2,3,4,5,6,7,8,9};
+// 	//int b[10];
+
+// 	for(int i = 0; i < 10; i ++)
+// 		printf("%d ",a[i]);
+// 	printf("\n");
+// 	ft_memmove(a + 1,a,sizeof(int) * 9);
 // 	for(int i = 0; i < 10; i ++)
 // 		printf("%d ",a[i]);
 // }
