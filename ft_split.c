@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:30:48 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/02 17:10:24 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/06 18:01:10 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,6 @@ char	**ft_split(const char *s, char c)
 		else if (flag == 1)
 			str[str_index ++] = middle;
 	}
-	str[i] = 0;
+	str[str_index] = 0;
 	return (str);
 }

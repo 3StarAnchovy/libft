@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/06 16:19:52 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/06 17:41:45 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -227,30 +227,31 @@
 
 //putnbr
 //itoa
-int main(void)
-{
-	//ft_putnbr_fd(271,1);
-	//printf("\n");
-	printf("%s",ft_itoa(-2147483648LL));
-}
-
-//split
 // int main(void)
 // {
-// 	char *a = "hello,fxxking,world,,!,";
-// 	//char *b = "abcde";
-// 	char **c = ft_split("      split       this for   me  !       ", ' ');
-// 	int	i = 0;
-// 	while(*(c + i) != 0)
-// 	{
-// 		printf("%s\n", *(c + i));
-// 		i ++;
-// 	}
-// 	free(c);
-// 	//char *c = ft_strndup(b + 1,2);
-// 	//printf("%s",c);å
-// 	//kadjsfklajsdfkl;j안해 ^^ㅣ바
+// 	//ft_putnbr_fd(271,1);
+// 	//printf("\n");
+// 	printf("%s",ft_itoa(-2147483648LL));
 // }
+
+//split
+int main(void)
+{
+	char *a = "hello,fxxking,world,,!,";
+	//char *b = "abcde";
+	char **c = ft_split("      split       this for   me  !       "
+, ' ');
+	int	i = 0;
+	while(*(c + i) != 0)
+	{
+		printf("%sl\n", *(c + i));
+		i ++;
+	}
+	free(c);
+	//char *c = ft_strndup(b + 1,2);
+	//printf("%s",c);å
+	//kadjsfklajsdfkl;j안해 ^^ㅣ바
+}
 
 //strtrim
 // int main(void)
