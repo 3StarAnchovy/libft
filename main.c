@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/05 18:03:31 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/06 16:19:52 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -227,12 +227,12 @@
 
 //putnbr
 //itoa
-// int main(void)
-// {
-// 	//ft_putnbr_fd(271,1);
-// 	//printf("\n");
-// 	printf("%s",ft_itoa(-2147483648LL));
-// }
+int main(void)
+{
+	//ft_putnbr_fd(271,1);
+	//printf("\n");
+	printf("%s",ft_itoa(-2147483648LL));
+}
 
 //split
 // int main(void)
@@ -253,11 +253,11 @@
 // }
 
 //strtrim
-int main(void)
-{
-	printf("%s\n",ft_strtrim("\t   \n\n\n  \n\n\t    Hello \t  Please\n Trim me !\t\t\t\n  \t\t\t\t  ", " \n\t"));
-	//printf("%s",ft_strchr("abc",'b'));
-}
+// int main(void)
+// {
+// 	printf("%s\n",ft_strtrim("\t   \n\n\n  \n\n\t    Hello \t  Please\n Trim me !\t\t\t\n  \t\t\t\t  ", " \n\t"));
+// 	//printf("%s",ft_strchr("abc",'b'));
+// }
 
 // //atoi
 // int main(void)
