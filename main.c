@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/06 17:41:45 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/06 19:43:56 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -235,23 +235,23 @@
 // }
 
 //split
-int main(void)
-{
-	char *a = "hello,fxxking,world,,!,";
-	//char *b = "abcde";
-	char **c = ft_split("      split       this for   me  !       "
-, ' ');
-	int	i = 0;
-	while(*(c + i) != 0)
-	{
-		printf("%sl\n", *(c + i));
-		i ++;
-	}
-	free(c);
-	//char *c = ft_strndup(b + 1,2);
-	//printf("%s",c);å
-	//kadjsfklajsdfkl;j안해 ^^ㅣ바
-}
+// int main(void)
+// {
+// 	char *a = "hello,fxxking,world,,!,";
+// 	//char *b = "abcde";
+// 	char **c = ft_split("      split       this for   me  !       "
+// , ' ');
+// 	int	i = 0;
+// 	while(*(c + i) != 0)
+// 	{
+// 		printf("%sl\n", *(c + i));
+// 		i ++;
+// 	}
+// 	free(c);
+// 	//char *c = ft_strndup(b + 1,2);
+// 	//printf("%s",c);å
+// 	//kadjsfklajsdfkl;j안해 ^^l발
+// }
 
 //strtrim
 // int main(void)
