@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:42:46 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/05 18:36:12 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/06 15:53:53 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static char	*strndup(char const *str, int n)
 	int		i;
 	char	*copy;
 
-	copy = (char *)malloc(sizeof(char *) * (n + 1));
+	copy = (char *)malloc(sizeof(char) * (n + 1));
 	if (!copy)
 		return (NULL);
 	i = 0;

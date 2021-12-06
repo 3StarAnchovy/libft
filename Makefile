@@ -6,7 +6,7 @@
 #    By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 18:36:03 by jihong            #+#    #+#              #
-#    Updated: 2021/12/04 17:57:58 by jihong           ###   ########.fr        #
+#    Updated: 2021/12/06 15:52:54 by jihong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,5 @@ fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
-
-norm :
-	norminette -R CheckForbiddenSourceHeader */*.[ch]
 
 .PHONY: all clean fclean re .c.o norm
