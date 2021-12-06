@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/05 17:45:06 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/05 18:03:31 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,15 +117,15 @@
 
 
 //strnstr
-int main(void)
-{
-	char a[10] = "abcdefg";
-	char b[10] = "cde";
-	printf("%s\n", strnstr("a","a",2));
-	//printf("\n");
-	printf("%s", ft_strnstr("a","a",2));
-	//check_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
-}
+// int main(void)
+// {
+// 	char a[10] = "abcdefg";
+// 	char b[10] = "cde";
+// 	printf("%s\n", strnstr("a","a",2));
+// 	//printf("\n");
+// 	printf("%s", ft_strnstr("a","a",2));
+// 	//check_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
+// }
 
 //ft_strdup
 // int main(void)
@@ -253,11 +253,11 @@ int main(void)
 // }
 
 //strtrim
-// int main(void)
-// {
-// 	printf("%s\n",ft_strtrim("\t   \n\n\n  \n\n\t    Hello \t  Please\n Trim me !\t\t\t\n  \t\t\t\t  ", " \n\t"));
-// 	//printf("%s",ft_strchr("abc",'b'));
-// }
+int main(void)
+{
+	printf("%s\n",ft_strtrim("\t   \n\n\n  \n\n\t    Hello \t  Please\n Trim me !\t\t\t\n  \t\t\t\t  ", " \n\t"));
+	//printf("%s",ft_strchr("abc",'b'));
+}
 
 // //atoi
 // int main(void)

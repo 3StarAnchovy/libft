@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:43:35 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/28 18:51:21 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/05 19:20:07 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	get_len(int n)
 	else if (n == 0)
 		return (1);
 	else if (n == -2147483648)
-		return (10);
+		return (12);
 	while (n != 0)
 	{
 		n /= 10;

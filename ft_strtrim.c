@@ -6,12 +6,11 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:42:46 by jihong            #+#    #+#             */
-/*   Updated: 2021/11/30 15:30:57 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/05 18:36:12 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	*strndup(char const *str, int n)
 {
