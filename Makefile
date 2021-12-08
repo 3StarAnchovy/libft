@@ -6,7 +6,7 @@
 #    By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 18:36:03 by jihong            #+#    #+#              #
-#    Updated: 2021/12/04 17:57:58 by jihong           ###   ########.fr        #
+#    Updated: 2021/12/06 19:19:39 by jihong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ SRCS	= ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_isalnum.c \
 			ft_strrchr.c ft_strlcat.c ft_strchr.c \
 			ft_calloc.c ft_bzero.c ft_atoi.c ft_itoa.c ft_strtrim.c \
 			ft_substr.c ft_strjoin.c ft_atoi.c ft_strmapi.c ft_split.c \
-			ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c
+			ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c \
+			ft_striteri.c
 
 SRCS_BN	= ft_lstnew.c ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c \
@@ -53,8 +54,5 @@ fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
-
-norm :
-	norminette -R CheckForbiddenSourceHeader */*.[ch]
 
 .PHONY: all clean fclean re .c.o norm
