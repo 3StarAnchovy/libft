@@ -6,7 +6,7 @@
 #    By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 18:36:03 by jihong            #+#    #+#              #
-#    Updated: 2021/12/06 19:19:39 by jihong           ###   ########.fr        #
+#    Updated: 2021/12/09 17:49:38 by jihong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,22 +28,27 @@ SRCS_BN	= ft_lstnew.c ft_lstsize.c ft_lstlast.c \
 OBJS	= ${SRCS:.c=.o}
 OBJS_BN	= ${SRCS_BN:.c=.o}
 INCS	= includes
-LIBC	= ar rc
+LIBC	= ar rcs
 LIBR	= ranlib
 CC		= gcc
 RM		= rm -f
 CFLAGS	= -Wall -Wextra -Werror
 
+ifdef WITH_BONUS
+	OBJECTS = $(OBJS) $(OBJS_BN)
+else
+	OBJECTS = $(OBJS)
+endif
+
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I${INCS}
 
-${NAME}: ${OBJS}
-	${LIBC} ${NAME} ${OBJS}
+${NAME}: $(OBJECTS)
+	${LIBC} $@ $^
 	${LIBR} ${NAME}
 
-bonus: ${OBJS} ${OBJS_BN}
-	${LIBC} ${NAME} ${OBJS} ${OBJS_BN}
-	${LIBR} ${NAME}
+bonus:
+	@make WITH_BONUS=1 all
 
 all: ${NAME}
 
@@ -55,4 +60,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re .c.o norm
+.PHONY: all clean fclean re .c.o bonus

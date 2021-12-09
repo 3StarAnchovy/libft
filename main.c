@@ -6,7 +6,7 @@
 /*   By: jihong <jihong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:40:47 by jihong            #+#    #+#             */
-/*   Updated: 2021/12/06 19:43:56 by jihong           ###   ########.fr       */
+/*   Updated: 2021/12/07 18:46:22 by jihong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,7 +200,10 @@
 // 	ft_strlcpy(p,a,0);
 // 	printf("%s",p);
 // }
-
+// int main(void)
+// {
+// 	printf("%ld",ft_strlen(NULL));
+// }
 //strlcat
 // int main(void)
 // {
@@ -266,3 +269,8 @@
 // 	printf("%d\n",atoi("-214748364559"));
 // 	printf("%d",ft_atoi("-214748364559"));
 // }
+
+int main(void)
+{
+	printf("%s",ft_strchr("asdf",'g'));
+}
